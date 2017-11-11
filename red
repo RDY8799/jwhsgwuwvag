@@ -113,7 +113,7 @@ sleep 6
 
 echo "Deseja continuar?"
 
-read -p "[YES/NO] : " -e -i cont
+read -p "[YES/NO] : " -e -i YES cont
 echo ""
 
 if [[ "$cont" = 'YES' ]]; then

@@ -1,7 +1,14 @@
 #!/bin/bash
-echo -e "\033[1;31m################################# \033[0m"
+
+clear
+
+apt-get install figlet
+
+clear
+
+echo -e "\033[1;31m################################################# \033[0m"
 echo -e "\033[1;36m © RDY SOFTWARE | 2016 - 2017 All rights reserved \033[0m"
-echo -e "\033[1;31m################################# \033[0m"
+echo -e "\033[1;31m################################################# \033[0m"
 echo ""
 echo ""
 
@@ -13,7 +20,7 @@ sleep 5
 
 echo ""
 
-echo -e "\033[4;31m   RED   \033[0m"
+figlet -cf banner RED SC
 
 sleep 5
 
@@ -26,6 +33,8 @@ echo ""
 echo -e "\033[1;32mEu não sei como você me aguenta! \033[0m"
 
 echo ""
+
+sleep 4
 
 echo -e "\033[1;32mhahahahahah MAS ESSE DEVE SER UM DOM QUE VOCÊ TEM... \033[0m"
 
@@ -40,6 +49,9 @@ echo ""
 
 echo -e "\033[1;32mMas eu peço desculpas por eu ser sensível de mais \033[0m"
 echo ""
+
+sleep 5
+
 echo -e "\033[1;36m É que eu percebo as coisas muitas vezes nos mínimos detalhes... Isso pode ser uma virtude... \033[0m"
 
 sleep 6
@@ -89,6 +101,10 @@ echo -e "\033[1;32mPor fim eu digo... \033[0m"
 
 echo ""
 
+sleep 2
+
+figlet -cf banner pocotinha
+
 sleep 4
 
 echo -e "\033[1;32mEU \033[0m"
@@ -105,11 +121,16 @@ sleep 6
 
 echo "Deseja continuar?"
 
-read -p "[YES/NO] : " -e -i s cont
+read -p "[YES/NO] : " -e -i YES cont
 echo ""
 
 if [[ "$cont" = 'YES' ]]; then
-echo -e "\033[1;32mAMO POCOTINHA! \033[0m"
+echo -e "\033[1;31mAMO POCOTINHA! \033[0m"
+
+echo ""
+
+echo -e "\033[1;36m######################################## \033[0m"
+echo ""
 fi
 
 if [[ "$cont" = 'NO' ]]; then

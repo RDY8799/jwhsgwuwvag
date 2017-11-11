@@ -2,9 +2,7 @@
 
 clear
 
-apt-get install figlet
-
-clear
+echo ""
 
 echo -e "\033[1;31m################################################# \033[0m"
 echo -e "\033[1;36m © RDY SOFTWARE | 2016 - 2017 All rights reserved \033[0m"
@@ -20,7 +18,7 @@ sleep 5
 
 echo ""
 
-figlet -cf banner RED SC
+figlet -c RED SC
 
 sleep 5
 
@@ -103,7 +101,7 @@ echo ""
 
 sleep 2
 
-figlet -cf banner pocotinha
+figlet -c banner pocotinha
 
 sleep 4
 

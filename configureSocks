@@ -1,0 +1,87 @@
+#!/bin/bash
+
+echo ""
+echo -e "\033[1;31m © RDY SOFTWARE | 2016 - 2017 All rights reserved \033[0m"
+echo ""
+echo -e "\033[1;32mInstalando pacotes...\n\nAguarde... \033[0m"
+
+apt-get update
+apt-get install python-minimal
+apt-get install python3
+apt-get install -y python3-pip
+apt-get install build-essential -y
+apt-get install libsqlite3-dev -y
+apt-get install zlib1g-dev -y
+apt-get install libncurses5-dev -y
+apt-get install libgdbm-dev -y
+apt-get install libbz2-dev -y
+apt-get install libreadline5-dev -y
+apt-get install libssl-dev libdb-dev -y
+
+clear
+echo -e "\033[1;32mBaixando arquivos... \033[0m"
+echo ""
+
+sleep 3
+
+wget https://github.com/Guilhermezkz/Guilhermezkz/raw/master/proxy.py 
+
+wget https://raw.githubusercontent.com/Guilhermezkz/Guilhermezkz/master/proxy8080.py
+
+wget https://raw.githubusercontent.com/Guilhermezkz/Guilhermezkz/master/proxy8799.py
+
+wget https://raw.githubusercontent.com/Guilhermezkz/Guilhermezkz/master/proxy3128.py
+
+clear
+
+echo -e "\033[1;32mAbrindo portas 22,443... \033[0m"
+
+sleep
+
+echo "Port 22
+Port 443
+Protocol 2
+KeyRegenerationInterval 3600
+ServerKeyBits 1024
+SyslogFacility AUTH
+LogLevel INFO
+LoginGraceTime 120
+PermitRootLogin yes
+StrictModes yes
+RSAAuthentication yes
+PubkeyAuthentication yes
+IgnoreRhosts yes
+RhostsRSAAuthentication no
+HostbasedAuthentication no
+PermitEmptyPasswords no
+ChallengeResponseAuthentication no
+PasswordAuthentication yes
+X11Forwarding yes
+X11DisplayOffset 10
+PrintMotd no
+PrintLastLog yes
+TCPKeepAlive yes
+#UseLogin no
+AcceptEnv LANG LC_*
+Subsystem sftp /usr/lib/openssh/sftp-server
+UsePAM yes" > /etc/ssh/sshd_config
+
+clear
+
+echo -e "\033[1;32mReniciando serviços... \033[0m"
+sleep 2
+
+sevice ssh restart
+service sshd restart
+
+echo -e "\033[1;32m Sessoes screen...
+
+screen -dmS screen python3 darkpy.py 80
+screen -dmS screen python3 darkpy.py 8080
+screen -dmS screen python3 darkpy.py 8799
+screen -dmS screen python3 darkpy.py 3128
+
+sleep 2
+
+
+echo -e "\033[1;32mConcluído! \033[0m"
